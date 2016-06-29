@@ -100,7 +100,11 @@ var PickerItem = Picker.Item;
           {(this.props.iconRight)
               ? this.props.iconRight
               : null
-            }
+          }
+          {(this.props.iconToggle)
+            ? (!this.state.isPickerVisible ? this.props.iconToggle[0] : this.props.iconToggle[1])
+            : null
+          }
 
         </View>
         </Field>

@@ -90,6 +90,15 @@ var PickerItem = Picker.Item;
                       this.props.containerStyle]}
           onLayout={this.handleLayoutChange.bind(this)}>
 
+          {(this.props.iconRight)
+              ? this.props.iconRight
+              : null
+          }
+          {(this.props.iconToggle)
+            ? (!this.state.isPickerVisible ? this.props.iconToggle[0] : this.props.iconToggle[1])
+            : null
+          }
+          
           <Text style={this.props.labelStyle}>{this.props.label}</Text>
             <Picker ref='picker'
               {...this.props.pickerProps}
