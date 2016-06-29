@@ -84,6 +84,7 @@ var PickerItem = Picker.Item;
       return(<View><Field
         {...this.props}
         ref='inputBox'
+        onPress={(event) => {this._togglePicker(event); this.props.onPress()}}>
         >
         <View style={[
                       this.props.containerStyle]}
