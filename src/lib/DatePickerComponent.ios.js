@@ -49,7 +49,7 @@ export class DatePickerComponent extends React.Component{
     return(<View><Field
       {...this.props}
       ref='inputBox'
-      onPress={(event) => {this._togglePicker(event); this.props.onPress()}}>
+      onPress={(event) => {this._togglePicker(event); this.props.onPress && this.props.onPress()}}>
       <View style={[formStyles.fieldContainer,
           formStyles.horizontalContainer,
           this.props.containerStyle]}
