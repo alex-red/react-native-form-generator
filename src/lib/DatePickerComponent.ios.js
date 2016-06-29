@@ -31,7 +31,6 @@ export class DatePickerComponent extends React.Component{
   }
 
 
-
   //      this.refs.picker.measure(this.getPickerLayout.bind(this));
 
 
@@ -63,6 +62,10 @@ export class DatePickerComponent extends React.Component{
           </View>
           {(this.props.iconRight)
             ? this.props.iconRight
+            : null
+          }
+          {(this.props.iconToggle)
+            ? (!this.state.isPickerVisible ? this.props.iconToggle[0] : this.props.iconToggle[1])
             : null
           }
         </View>
