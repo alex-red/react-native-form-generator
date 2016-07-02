@@ -56,6 +56,7 @@ export class DatePickerComponent extends React.Component{
       timeZoneOffsetInMinutes = {timeZoneOffsetInMinutes}
       date = {this.state.date || new Date()}
       onDateChange = {this.handleValueChange.bind(this)}
+      style = {this.props.style}
     />
 
     let pickerWrapper = React.cloneElement(this.props.pickerWrapper,{onHidePicker:()=>{this.setState({isPickerVisible:false})}},datePicker);
